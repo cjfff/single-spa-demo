@@ -1,0 +1,21 @@
+{
+  "name": "single-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install:all": "concurrently \"yarn install:main\"  \"yarn install:nuxt\" ",
+    "install:main": "cd single-main && yarn",
+    "install:nuxt": "cd nuxt-subapp && yarn",
+    "serve:all": "concurrently \"yarn serve:main\" \"yarn serve:nuxt\"",
+    "serve:main": "cd single-main && yarn dev",
+    "serve:nuxt": "cd nuxt-subapp  && yarn dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
